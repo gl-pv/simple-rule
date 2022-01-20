@@ -1,6 +1,5 @@
-import React from 'react'
-import styles from './styles.module.css'
+import SimpleRulesProvider from './components/SimpleRulesProvider'
+import useRules from './hooks/useRules'
+import usePermissions from './hooks/usePermissions/usePermissions'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { SimpleRulesProvider, useRules, usePermissions }

@@ -1,10 +1,22 @@
 {
   "name": "simple-rule",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "glee812",
+  "version": "0.1.0",
+  "description": "React flex rules for entity actions access",
+  "author": "gl-pv",
   "license": "MIT",
-  "repository": "glee812/simple-rule",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gl-pv/simple-rule.git"
+  },
+  "keywords": [
+    "react",
+    "rule",
+    "authorization",
+    "permission",
+    "access",
+    "allow",
+    "deny"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
