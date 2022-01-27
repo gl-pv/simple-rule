@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import useRules from '../useRules'
 
 const RestrictionChecker = ({ rule, record, entity, children }) => {
@@ -11,3 +12,10 @@ const RestrictionChecker = ({ rule, record, entity, children }) => {
 }
 
 export default RestrictionChecker
+
+RestrictionChecker.propTypes = {
+  rule: PropTypes.string,
+  entity: PropTypes.string,
+  record: PropTypes.object,
+  children: PropTypes.any
+}

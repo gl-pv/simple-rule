@@ -1,6 +1,6 @@
 {
   "name": "simple-rule",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React flex rules for entity actions access",
   "author": "gl-pv",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "rule",
     "authorization",
     "permission",
+    "condition",
     "access",
     "allow",
     "deny"

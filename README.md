@@ -15,7 +15,7 @@ npm install --save simple-rule
 ```
 
 ## Quick start
-To get you started quickly, here is an example that will get you started right away by providing the easiest and simplest usage possible:
+To get you started quickly, here is an example that will get you started right away by providing the simplest usage possible:
 
 #### Wrapp your component by SimpleRulesProvider and create rulesSchema
 

@@ -1,20 +1,7 @@
 import { useCallback } from 'react'
+import PropTypes from 'prop-types'
 
-const useSchema = (rulesSchema, userRolesSchema, currentUser) => {
-  const setRolesMap = useCallback(
-    (passedSchema) => {
-      const rolesMap = {}
-
-      Object.entries(passedSchema).forEach(([roleName, roleCheckCondition]) => {
-        rolesMap[roleName] = (actionOwner) => roleCheckCondition(actionOwner)
-      })
-
-      return rolesMap
-    },
-    [currentUser]
-  )
-
-  const rolesMap = setRolesMap(userRolesSchema)
+const useRulesSchema = (rulesSchema, rolesMap, currentUser) => {
   const ruleCheck = useCallback(
     (ruleLogic) => (record) =>
       ruleLogic({ record, currentUser, roles: rolesMap }),
@@ -43,10 +30,15 @@ const useSchema = (rulesSchema, userRolesSchema, currentUser) => {
     },
     [currentUser]
   )
-
   const normalizedSchema = normalizeSchema(rulesSchema)
 
   return normalizedSchema
 }
 
-export default useSchema
+export default useRulesSchema
+
+useRulesSchema.propTypes = {
+  rulesSchema: PropTypes.object,
+  rolesMap: PropTypes.object,
+  currentUser: PropTypes.object
+}

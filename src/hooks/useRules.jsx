@@ -1,8 +1,9 @@
 import { useContext } from 'react'
+import PropTypes from 'prop-types'
 import SimpleRulesContext from '../components/SimpleRulesContext'
 
 const useRules = (entity) => {
-  const rules = useContext(SimpleRulesContext)
+  const { schema: rules } = useContext(SimpleRulesContext)
 
   if (!entity) {
     throw new Error('Empty entity in simple-rules useRules hook')
@@ -12,3 +13,7 @@ const useRules = (entity) => {
 }
 
 export default useRules
+
+useRules.propTypes = {
+  entity: PropTypes.string
+}

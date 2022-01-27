@@ -1,4 +1,5 @@
 import React, { useCallback } from 'react'
+import PropTypes from 'prop-types'
 import RestrictionChecker from './RestrictionChecker'
 
 const usePermissions = (entity) => {
@@ -6,7 +7,7 @@ const usePermissions = (entity) => {
     throw new Error('Empty entity in simple-rules usePermissions hook')
   }
 
-  const RestrictionWrapper = useCallback(
+  const RestrictionCheckWrapper = useCallback(
     ({ rule, record, children }) => (
       <RestrictionChecker
         rule={rule}
@@ -18,7 +19,11 @@ const usePermissions = (entity) => {
     [entity]
   )
 
-  return RestrictionWrapper
+  return RestrictionCheckWrapper
 }
 
 export default usePermissions
+
+usePermissions.propTypes = {
+  entity: PropTypes.string
+}
