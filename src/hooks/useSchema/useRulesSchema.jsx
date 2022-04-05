@@ -28,11 +28,9 @@ const useRulesSchema = (rulesSchema, rolesMap, currentUser) => {
 
       return normalizedSchema
     },
-    [currentUser]
+    [ruleCheck]
   )
-  const normalizedSchema = normalizeSchema(rulesSchema)
-
-  return normalizedSchema
+  return normalizeSchema(rulesSchema)
 }
 
 export default useRulesSchema

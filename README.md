@@ -1,12 +1,12 @@
 # simple-rule
 
-> React flex rules for entity actions access
+> React library for simple permissions map creation.
 
 [![NPM](https://img.shields.io/npm/v/simple-rule.svg)](https://www.npmjs.com/package/simple-rule) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Why
 Quite often, in any application, becomes necessary to allow or deny certain actions with objects, depending on the access rights of the current user.
-The library allows you to simplify the process of initializing the rules and their checks.
+This library allows you to simplify the process of initializing the rules and their checks.
 
 ## Install
 
@@ -15,9 +15,9 @@ npm install --save simple-rule
 ```
 
 ## Quick start
-To get you started quickly, here is an example that will get you started right away by providing the simplest usage possible:
+This example explain simplest possible usage:
 
-#### Wrapp your component by SimpleRulesProvider and create rulesSchema
+#### Wrap your component by SimpleRulesProvider and create rulesSchema
 
 ```jsx
 import React from 'react'
@@ -69,7 +69,7 @@ function PostsList() {
 The following components are available as named imports from simple-rule.
 
 ### SimpleRulesProvider
-The `SimpleRulesProvider` component is used to wrap your React App so an instance of coniditions check will be made available within your React tree.
+The `SimpleRulesProvider` component is used for wrapping your React App so an instance of coniditions check will be made available within your React tree.
 
 ```jsx
 const rulesSchema = {
@@ -97,7 +97,7 @@ function Example({ currentUser }) {
 
 #### Props
 ##### `currentUser`
-User object:
+User object with any needed for you params:
 ```jsx
   const currentUser = { id: 1, role: 'admin', ... }
 ```
