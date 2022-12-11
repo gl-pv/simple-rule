@@ -1,7 +1,7 @@
 {
   "name": "simple-rule",
-  "version": "0.2.0",
-  "description": "React flex rules for entity actions access",
+  "version": "0.2.1",
+  "description": "React flex policies for entity actions access. Simple rule is an authorization library which restricts what resources a given user is allowed to access.",
   "author": "gl-pv",
   "license": "MIT",
   "repository": {
@@ -11,6 +11,7 @@
   "keywords": [
     "react",
     "rule",
+    "policy",
     "authorization",
     "permission",
     "condition",

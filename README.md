@@ -1,6 +1,6 @@
 # simple-rule
 
-> React library for simple permissions map creation.
+> React library for simple permissions map creation and policy checking. Simple rule is an authorization library which restricts what resources a given user is allowed to access.
 
 [![NPM](https://img.shields.io/npm/v/simple-rule.svg)](https://www.npmjs.com/package/simple-rule) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -162,7 +162,7 @@ Hook parameter is entity name from rulesSchema.
 
 ```
 ### usePermissions hook
-The `usePermissions` hook is used to connect with entity rule conditions.
+The `usePermissions` hook can be used for connecting entity rule condition with some UI block.
 Hook return wrapper that renders children when connected rule condition check is true.
 Hook parameter is entity name from rulesSchema.
 Wrapper props is entity instance `record` and rule name `rule`.
@@ -179,7 +179,7 @@ Wrapper props is entity instance `record` and rule name `rule`.
     const PostPermission = usePermissions('post')
 
     return (
-      <PostPermission rule="destroy" record={post}>
+      <PostPermission action="destroy" record={post}>
         { post.content }
       </PostPermission>
     )

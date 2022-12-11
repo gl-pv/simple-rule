@@ -15,7 +15,7 @@ const List = () => {
     posts.map((post) => (
         <div key={post.id}>
           { postRules.show(post) && `${post.id}. ${post.content}` }
-          <PostPermission rule="destroy" record={post}>
+          <PostPermission action="destroy" record={post}>
             (This post is available for destroy when your role is admin)
           </PostPermission>
         </div>

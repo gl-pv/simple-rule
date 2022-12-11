@@ -8,9 +8,9 @@ const usePermissions = (entity) => {
   }
 
   const RestrictionCheckWrapper = useCallback(
-    ({ rule, record, children }) => (
+    ({ action, record, children }) => (
       <RestrictionChecker
-        rule={rule}
+        action={action}
         record={record}
         children={children}
         entity={entity}
